@@ -1,0 +1,74 @@
+/* --- Responsive Grid --- */
+.products-grid {
+  display: grid;
+  /* Creates as many columns as will fit, with a minimum width of 220px each */
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+/* --- Product Card Styling --- */
+.product-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Replaced Inline Image Styles --- */
+.product-image {
+  width: 100%;
+  max-width: 200px;
+  /* Maintains your original 200px requirement */
+  height: 200px;
+  object-fit: contain;
+  /* Prevents image distortion */
+  margin-bottom: 1rem;
+}
+
+/* --- Typography & Extras --- */
+.product-title {
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.product-price {
+  font-weight: bold;
+  color: #10b981;
+  font-size: 1.125rem;
+  margin-top: auto;
+  /* Pushes price to the bottom if titles are different lengths */
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.view-all-btn {
+  padding: 0.5rem 1rem;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.view-all-btn:hover {
+  background-color: #2563eb;
+}
